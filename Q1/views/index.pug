@@ -1,0 +1,46 @@
+doctype html
+html
+    head 
+        title=title 
+        style 
+            include ../public/stylesheets/style.css 
+            script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js")
+            script(src='./buttonHandler.js' type="text/javascript")
+            //- script(type="text/javascript").
+            //-     $(document).ready(function(){
+            //-         console.log("asdasdasdasd")
+            //-         $("button").on("click",function(event){
+            //-             event.prefentDefault()
+            //-             this.innerHtml = "Finished"
+            //-             $.ajax({
+            //-                 url: "localhost:3000/todo/",
+            //-                 dataType: "json",
+            //-                 type: "PUT",
+            //-                 data: 1,
+            //-                 success: ()=>{
+            //-                     alert("clicked button")
+            //-                 }
+            //-             })
+            //-         })
+            //-     })
+
+    body 
+        h1  Your data will be displayed here:
+        table 
+            tbody 
+                tr 
+                    th ID 
+                    th Title 
+                    th Description 
+                    th Timestamp 
+                    th Status
+                    
+                if(taskList)
+                    each task in taskList 
+                        tr 
+                            td #{task.id}
+                            td #{task.title}
+                            td #{task.desc}
+                            td #{task.timestamp}
+                            td 
+                                button #{task.status}
