@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/navBar.css')
+    script(src="https://code.jquery.com/jquery-3.6.1.slim.js" integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk=" crossorigin="anonymous")
+    script(src="/javascripts/register.js")
+  body
+  
+    .container
+    div.topnav.topnav
+      a.active(href="./homePage") Home 
+      a(href="./login") Home    
+      a(href="./login") Home    
+      a(href="./login") Home 
+      a(href="./login") Home 
+      a(href="./login") Home    
+      a.toTop(href="#") &#8593;
+    br
+    h1 Registration
+    p Create an account. Already have one?
+      a(href='/login') Login Now.
+    form
+      .form-group
+        label(for='username') Username
+        input(type='text', id='username', placeholder='enter a username', name='username')
+      .form-group
+        label(for='password') Email
+        input(type='email', id='email', placeholder='enter a email', name='email')
+      .form-group
+        label(for='password') Password
+        input(type='password', id='password', placeholder='enter a password', name='password')
+      
+      button.btn.btn(type='submit') Submit
+      a(href='/', role='button') Cancel

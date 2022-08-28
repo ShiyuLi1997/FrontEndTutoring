@@ -1,0 +1,24 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/navBar.css')
+        script(src="https://code.jquery.com/jquery-3.6.1.slim.js" integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk=" crossorigin="anonymous")
+        script(src="/javascripts/homePage.js")
+    body
+        h1 Welcome to Home Page
+        div 
+            a.active(href="./homePage") Home 
+            a(href="./login") login    
+            a(href="./login") login    
+            a(href="./login") login 
+            a(href="./login") login 
+            a(href="./login") login    
+            a.toTop(href="#") &#8593;
+            br
+        
+        div.productGalery
+            each(product in products)
+                li product.name
+
+
